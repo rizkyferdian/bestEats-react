@@ -19,7 +19,7 @@ function Navbar() {
                 </h1>
 
                 <div className='hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-sm'>
-                    <p className='bg-black text-white rounded-full px-2 py-2'>Delivery</p>
+                    <p className='bg-black text-white rounded-full p-2'>Delivery</p>
                     <p className='p-2'>Pickup</p>
                 </div>
             </div>
@@ -33,13 +33,13 @@ function Navbar() {
 
             {/* Cart */}
 
-            <button className='bg-black text-white hidden md:flex items-center rounded-full py-2 px-4 gap-2'>
+            <button className='bg-black text-white hidden md:flex items-center rounded-full py-2 px-4'>
                 <BsFillCartFill size={20} /> Cart
             </button>
 
             {/* Mobile Menu */}
 
-            <div className={nav ? 'bg-black/80 w-full h-screen fixed z-10 top-0 left-0' : ''}></div>
+            {nav ? <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0'></div> : ''}
 
             {/* Drawer Menu */}
             <div className={nav ? 'fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300' : 'fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300'}>
